@@ -13,7 +13,7 @@ export default {
     },
     data: function() {
         return {
-            feid: Vue.util.extend({}, this.feid)
+            //feid: Vue.util.extend({}, this.feid)
         }
     },
     methods: {

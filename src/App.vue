@@ -3,10 +3,10 @@
         <div class="app-top" v-bind:style="{height: panelTop + 'px' }"><atomsContainer>top</atomsContainer></div>
         <div class="app-left" v-on:dragover="dragover" v-on:drop="drop" v-bind:style="{width: calcPanelWidthLeft + 'px', top:panelTop + 'px', bottom:panelBottom + 'px' }"><atomsContainer><atomsButton>TEST</atomsButton></atomsContainer></div>
         <div id="app-panel" class="app-panel" v-on:dragover="dragover" v-on:drop="drop" v-bind:style="{top: panelTop + 'px', left: panelLeft + 'px', bottom: panelBottom + 'px', right: panelRight + 'px' }">
-            <organismsTab v-bind:fetabs="fetabs" feselectedId="1"></organismsTab>
+            <organismsTab v-bind:fetabs="fetabs" v-bind:feselectedId="1"></organismsTab>
         </div>
         <div class="app-right" v-on:dragover="dragover" v-on:drop="drop" v-bind:style="{width: calcPanelWidthRight + 'px', top:panelTop + 'px', bottom:panelBottom + 'px' }"><atomsContainer>right</atomsContainer></div>
-        <div class="app-bottom" v-bind:style="{height: panelBottom + 'px' }"><atomsContainer>bottom</atomsContainer></div> 
+        <div class="app-bottom" v-bind:style="{height: panelBottom + 'px' }"><atomsContainer>bottom</atomsContainer></div>
         <div draggable="true" id="app-sizer-left" class="app-sizer-left" v-on:dragover="dragover" v-on:drop="drop" v-on:dragstart="dragStart" v-on:drag="drag" v-bind:style="{left: calcPanelWidthLeft + 'px', top:panelTop + 'px', bottom:panelBottom + 'px', width: sizerWidth + 'px' }"></div>
         <div draggable="true" id="app-sizer-right" class="app-sizer-right" v-on:dragover="dragover" v-on:drop="drop" v-on:dragstart="dragStart" v-on:drag="drag" v-bind:style="{right: calcPanelWidthRight + 'px', top:panelTop + 'px', bottom:panelBottom + 'px', width: sizerWidth + 'px' }"></div>
     </div>
@@ -94,7 +94,7 @@ export default {
                     let max = (this.panelLeft + clientWidth);
                     if(result > max)
                         result = max;
-                    
+
                     this.panelLeft = result;
                 }
                 else if(id==="app-sizer-right")
@@ -107,7 +107,7 @@ export default {
                     let max = (this.panelRight + clientWidth);
                     if(result > max)
                         result = max;
-                    
+
                     this.panelRight = result;
                 }
             }
@@ -127,7 +127,7 @@ export default {
         height:100%;
         width:100%;
 
-        > div 
+        > div
         {
             border:1px solid black;
             box-sizing: border-box;
@@ -161,7 +161,7 @@ export default {
                 z-index:99;
                 background-color:lightblue;
                 cursor:ew-resize;
-                &.drag 
+                &.drag
                 {
                     background-color:blue;
                 }
@@ -172,13 +172,13 @@ export default {
                 z-index:99;
                 background-color:lightblue;
                 cursor:ew-resize;
-                &.drag 
+                &.drag
                 {
                     background-color:blue;
                 }
             }
         }
-    
+
     }
-    
+
 </style>

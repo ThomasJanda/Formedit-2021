@@ -1,8 +1,8 @@
 <template>
-    
+
     <div class="panels">
-        <div v-for="fetab in fetabs" class="panels-panel">
-            <atomsTabPanel feid="fetab.id" v-bind:feclass="feselectedId==fetab.id?'selected':''">{{fetab.content}}</atomsTabPanel>   
+        <div v-for="fetab of fetabs" class="panels-panel">
+            <atomsTabPanel v-bind:feid="fetab.id" v-bind:feclass="feselectedId==fetab.id?'selected':''">{{fetab.content}}</atomsTabPanel>
         </div>
     </div>
 
@@ -14,11 +14,11 @@ import atomsTabPanel from '@/app/ui/atoms/TabPanel.vue'
 export default {
     props: {
         fetabs: Array,
-        feselectedId: String
+        feselectedId: Number
     },
     data: function() {
         return {
-            feselectedId:""
+            //feselectedId:""
         }
     },
     components: {
