@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
+import './index.scss';
 
-var vm = new Vue({ 
+var vm = new Vue({
     el: '#formedit2021',
-    template:'<App/>', 
+    template:'<App/>',
     components: { App }
 });
-
-export default vm
+console.log("loaded");

@@ -8,7 +8,7 @@ import atomsContainer from '@/app/ui/atoms/Container.vue'
 
 export default {
     props: {
-        feid: String,
+        feid: Number,
         feclass: String
     },
     components: {
@@ -24,10 +24,10 @@ export default {
         left:0px;
         right:0px;
         top:0px;
-        bottom:0px; 
+        bottom:0px;
         display:none;
 
-        &.selected 
+        &.selected
         {
             display:block;
         }
