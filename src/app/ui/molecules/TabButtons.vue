@@ -1,12 +1,12 @@
 <template>
-    
+
     <div class="tab-buttons">
         <div v-for="fetab in fetabs" class="tab-buttons-button">
-            <atomsTabButton 
-                feid="fetab.id" 
+            <atomsTabButton
+                feid="fetab.id"
                 v-bind:feclass="feselectedId==fetab.id ? 'selected':''"
                 v-on:change="change"
-                >{{fetab.text}}</atomsTabButton>   
+                >{{fetab.text}}</atomsTabButton>
         </div>
     </div>
 
@@ -18,11 +18,11 @@ import atomsTabButton from '@/app/ui/atoms/TabButton.vue'
 export default {
     props: {
         fetabs: Array,
-        feselectedId: String,
+        feselectedId: Number,
     },
     data: function() {
         return {
-            feselectedId: Vue.util.extend({}, this.feselectedId)
+            //feselectedId: Vue.util.extend({}, this.feselectedId)
         }
     },
     methods: {
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    div.tab-buttons 
+    div.tab-buttons
     {
         display: flex;
         flex-direction: row;

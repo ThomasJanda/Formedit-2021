@@ -1,8 +1,8 @@
 <template>
     <div class="tab">
         <div class="tab-header">
-            <moleculesTabButtons 
-                v-bind:fetabs="fetabs" 
+            <moleculesTabButtons
+                v-bind:fetabs="fetabs"
                 v-bind:feselectedId="feselectedId"
                 v-on:change="change"
                 ></moleculesTabButtons>
@@ -20,7 +20,7 @@ import moleculesTabPanels from '@/app/ui/molecules/TabPanels.vue'
 export default {
     props: {
         fetabs: Array,
-        feselectedId: String
+        feselectedId: Number
     },
     methods: {
         change: function(feselectedId) {
@@ -28,6 +28,7 @@ export default {
         }
     },
     data: function() {
+        return {};
     },
     components: {
         moleculesTabButtons,moleculesTabPanels
@@ -36,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .tab 
+    .tab
     {
         position:absolute;
         left:0px;
@@ -47,15 +48,15 @@ export default {
         .tab-header
         {
             position:absolute;
-            left:0px; 
+            left:0px;
             right:0px;
             top:0px;
             height:30px;
         }
-        .tab-content 
+        .tab-content
         {
             position:absolute;
-            left:0px; 
+            left:0px;
             right:0px;
             top:30px;
             bottom:0px;

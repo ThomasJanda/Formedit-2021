@@ -2,3 +2,5 @@
 /node_modules
 /vendor
 /workspace.code-workspace
+/.idea/
+/dist/
